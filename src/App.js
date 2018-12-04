@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Texts } from './texts';
+import { Header } from './header'
+import { Projects } from './projects';
+import MediaQuery from 'react-responsive';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <MediaQuery minDeviceWidth={1095}>
+          <div className="App">
+            <div style={{ flex: 2 }} />
+            <div style={{ flex: 16 }}>
+              <Header />
+              <Texts />
+              <Projects />
+            </div>
+            <div style={{ flex: 2 }} />
+          </div>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={1095}>
+          <div className="App">
+            <div style={{ flex: 2 }} />
+            <div style={{ flex: 16 }}>
+              <Header />
+              <Texts />
+            </div>
+            <div style={{ flex: 2 }} />
+          </div>
+          <Projects />
+        </MediaQuery>
+      </React.Fragment>
+
     );
   }
 }
