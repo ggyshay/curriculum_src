@@ -161,12 +161,22 @@ ul {
     body {
         font-size: 8px;
     }
-
     h2 {
-        font-size : 10px;
+        font-size: 10px;
     }
-
     .project {
         margin-bottom: 2rem;
+    }
+    .ara {
+        border-right: 4px solid #03AB00;
+    }
+    .evolution {
+        border-left: 4px solid #FF7557;
+    }
+    .univerhouse {
+        border-right: 4px solid #62EFFF;
+    }
+    .sound {
+        border-left: 4px solid #da0027;
     }
 }

@@ -4,6 +4,7 @@ import { Texts } from './texts';
 import { Header } from './header'
 import { Projects } from './projects';
 import MediaQuery from 'react-responsive';
+import { Footer } from './footer';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             </div>
             <div style={{ flex: 2 }} />
           </div>
+
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1095}>
           <div className="App">
@@ -31,6 +33,7 @@ class App extends Component {
           </div>
           <Projects />
         </MediaQuery>
+        <Footer />
       </React.Fragment>
 
     );
